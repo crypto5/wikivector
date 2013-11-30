@@ -1,7 +1,7 @@
 Wikivector
 ==========
 
-The main idea of this project is to build machine learning and information retrieval tools, which use Wikipedia as training data.
+The main idea of this project is to build machine learning and information retrieval tools, which use 100GB of Wikipedia data for models training.
 
 Currently achieved goals:
 * calculate tf-idf values for lexemes in Wikipedia (covered 20M lexemes)
