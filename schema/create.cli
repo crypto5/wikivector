@@ -1,0 +1,99 @@
+create keyspace wikivector;
+
+use wikivector;
+
+create column family WikiPageCF
+  and comparator = 'UTF8Type'
+  and key_validation_class = 'UTF8Type'
+  and column_metadata = [
+    {column_name : 'isCategory', validation_class : BooleanType},
+    {column_name : 'en_page_id', validation_class : UTF8Type},
+    {column_name : 'lang', validation_class : UTF8Type},
+    {column_name : 'title', validation_class : UTF8Type,
+    index_name : 'WikiPageCF_title_idx', index_type : 0},
+    {column_name : 'text', validation_class : UTF8Type}
+  ]
+  and compression_options = {'chunk_length_kb' : '64', 'sstable_compression' : 'org.apache.cassandra.io.compress.SnappyCompressor'};
+
+create column family WikiPageCategoryCF
+  and comparator = 'IntegerType'
+  and default_validation_class = 'UTF8Type'
+  and key_validation_class = 'UTF8Type'
+  and compression_options = {'chunk_length_kb' : '64', 'sstable_compression' : 'org.apache.cassandra.io.compress.SnappyCompressor'};
+
+create column family LexemeCountersCF
+  and comparator = 'UTF8Type'
+  and key_validation_class = 'UTF8Type'
+  and default_validation_class = 'CounterColumnType'
+  and column_metadata = [
+    {column_name : 'title_count', validation_class : CounterColumnType},
+    {column_name : 'total_count', validation_class : CounterColumnType},
+    {column_name : 'doc_count', validation_class : CounterColumnType}
+  ]
+  and compression_options = {'chunk_length_kb' : '64', 'sstable_compression' : 'org.apache.cassandra.io.compress.SnappyCompressor'};
+  
+create column family LexemeCategoryInfoCF
+  and comparator = 'IntegerType'
+  and default_validation_class = 'BytesType'
+  and key_validation_class = 'UTF8Type'
+  and compression_options = {'chunk_length_kb' : '64', 'sstable_compression' : 'org.apache.cassandra.io.compress.SnappyCompressor'};
+
+create column family LexemeCategoryTitleCountersCF
+  and comparator = 'IntegerType'
+  and default_validation_class = 'CounterColumnType'
+  and key_validation_class = 'UTF8Type'
+  and compression_options = {'chunk_length_kb' : '64', 'sstable_compression' : 'org.apache.cassandra.io.compress.SnappyCompressor'};
+
+create column family LexemeCategoryDocCountersCF
+  and comparator = 'IntegerType'
+  and default_validation_class = 'CounterColumnType'
+  and key_validation_class = 'UTF8Type'
+  and compression_options = {'chunk_length_kb' : '64', 'sstable_compression' : 'org.apache.cassandra.io.compress.SnappyCompressor'};
+
+create column family LexemeCategoryTotalCountersCF
+  and comparator = 'IntegerType'
+  and default_validation_class = 'CounterColumnType'
+  and key_validation_class = 'UTF8Type'
+  and compression_options = {'chunk_length_kb' : '64', 'sstable_compression' : 'org.apache.cassandra.io.compress.SnappyCompressor'};
+  
+create column family CategoryCF
+  and comparator = 'UTF8Type'
+  and key_validation_class = 'IntegerType'
+  and column_metadata = [
+    {column_name : 'page_id', validation_class : UTF8Type},
+    {column_name : 'en_page_id', validation_class : UTF8Type},
+    {column_name : 'lang', validation_class : UTF8Type},
+    {column_name : 'title', validation_class : UTF8Type, index_name : 'CategoryCF_title_idx', index_type : 0}
+  ]
+  and compression_options = {'chunk_length_kb' : '64', 'sstable_compression' : 'org.apache.cassandra.io.compress.SnappyCompressor'};
+
+create column family CategoryCountersCF
+  and comparator = 'UTF8Type'
+  and key_validation_class = 'IntegerType'
+  and default_validation_class = 'CounterColumnType'
+  and column_metadata = [
+    {column_name : 'doc_count', validation_class : CounterColumnType},
+    {column_name : 'total_count', validation_class : CounterColumnType}
+  ]
+  and compression_options = {'chunk_length_kb' : '64', 'sstable_compression' : 'org.apache.cassandra.io.compress.SnappyCompressor'};
+  
+create column family CategoryDirectParentsCF
+  and comparator = 'IntegerType'
+  and default_validation_class = 'IntegerType'
+  and key_validation_class = 'IntegerType'
+  and compression_options = {'chunk_length_kb' : '64', 'sstable_compression' : 'org.apache.cassandra.io.compress.SnappyCompressor'};
+  
+create column family CategoryAllParentsCF
+  and comparator = 'IntegerType'
+  and default_validation_class = 'IntegerType'
+  and key_validation_class = 'IntegerType'
+  and compression_options = {'chunk_length_kb' : '64', 'sstable_compression' : 'org.apache.cassandra.io.compress.SnappyCompressor'};
+
+create column family ProcessedCF
+  and comparator = 'UTF8Type'
+  and key_validation_class = 'UTF8Type'
+  and column_metadata = [
+    {column_name : 'value', validation_class : UTF8Type}
+  ]
+  and compression_options = {'chunk_length_kb' : '64', 'sstable_compression' : 'org.apache.cassandra.io.compress.SnappyCompressor'};
+  
