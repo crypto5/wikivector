@@ -147,3 +147,7 @@ Application which extracts text from web-pages, computes top tf-idf lexemes and 
 
 
 [![githalytics.com alpha](https://cruel-carlota.pagodabox.com/60929b736be1b218ce6b887c3aef6d68 "githalytics.com")](http://githalytics.com/akolyadenko/wikivector)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/crypto5/wikivector/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
