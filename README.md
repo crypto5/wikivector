@@ -72,10 +72,10 @@ Following steps have to be done in order to use Wikivector API:
 
 * install Cassandra database
 
-* create wikivector schema using cassandra-cli tool and definition in [schema file](https://github.com/akolyadenko/wikivector/blob/master/schema/create.cli)
+* create wikivector schema using cassandra-cli tool and definition in [schema file](https://github.com/crypto5/wikivector/blob/master/schema/create.cli)
 
 * download wikivector distribution: [link](
-http://dl.bintray.com/crypto5/wikivector/wikivector/wikivector/1.0.0/#wikivector-1.0.0-dist.zip)
+http://dl.bintray.com/crypto5/wikivector/wikivector/wikivector/1.0.0/wikivector-1.0.0-dist.zip)
 
 * unzip distribution file
 
