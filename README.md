@@ -90,7 +90,7 @@ http://dl.bintray.com/crypto5/wikivector/wikivector/wikivector/1.0.0/#wikivector
 How to use API + example
 ===========================
 
-API is implemented as a jar library, and provides API described in [MetaDataExtractor.scala](https://github.com/akolyadenko/wikivector/blob/master/src/main/scala/org/wikivector/api/MetaDataExtractor.scala) file.
+API is implemented as a jar library, and provides API described in [MetaDataExtractor.scala](https://github.com/crypto5/wikivector/blob/master/src/main/scala/org/wikivector/api/MetaDataExtractor.scala) file.
 
 Following example illustrates how to use API. Example is implemented using Scala and SBT, but porting to other JVM languages is straightforward.
 
