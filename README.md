@@ -1,18 +1,18 @@
 Wikivector
 ==========
 
-The main idea of this project is to build machine learning and information retrieval tools, which use 100GB of Wikipedia data for models training.
+The main goal of this project is to build machine learning and information retrieval tools, which use 100GB of Wikipedia data for models training.
 
 Currently achieved goals:
 * calculate tf-idf values for lexemes in Wikipedia (covered 20M lexemes)
 * refine Wikipedia categories graph (it is not very clean at the moment, and containts many strange pathes)
 * build classifier which can calculate relevant Wikipedia categories for given text (covered 2.5M categories)
-* provide API for extraction of top td-idf terms, Wikipedia categories, and categories related terms from given text
+* provide API for extraction of top td-idf terms, Wikipedia categories, and category related terms from given text
 * support popular languages, currently supported: English, Russian, Arabic, Dutch, German, French, Polish, Italian, Portuguese, Spanish, Ukranian.
 
-You can find some analysis results bellow. Example of code in the following sections.
+You can find some results of analysis bellow. Example of code in the following sections.
 
-Output for short Scala overview article: http://www.scala-lang.org/what-is-scala.html:
+Output for short Scala overview article: http://www.scala-lang.org/what-is-scala.html :
 
     tfIdfKeywords:scala:193.77170051248623,java:52.95372539848002,function:52.181138693912224,object-ori:42.845987417422116,scalabl:31.183415781183864,framework:22.424868316076083,pattern:19.45986022975381,mutabl:19.3197022298865,immut:16.40817674230587,seamless:15.741342536279676,object:15.40676308543515,method-cal:15.008148413796308,tool:13.703691178437554,prefer:12.975715536436624,compil:12.879375818289226,oderski:12.502622476805572,support:12.214996043652862,jvms:12.160336270318938,concurr:12.153787670093097,syntax:12.091897879302746,
     Category lexemes:object-ori:151.79924643131352,jvms:129.11795272153125,oderski:85.40973022877834,compile-tim:76.69542850755704,multi-thread:64.373084658133,javaon:64.15595681501244,intellij:56.11033125437374,netbean:44.592142889980096,jvm:42.90886564603815,mutabl:19.461838661675905,future-proof:8.720668389885525,interop:8.270132065295357,scalabl:7.849034182808977,worksheet:4.978275360027274,
@@ -22,7 +22,7 @@ Output for short Scala overview article: http://www.scala-lang.org/what-is-scala
     Category:Articles with example code:27.212404230851345
     Category:Concurrent computing:27.155771600830445
     
-Stock news from Reuters: http://www.reuters.com/article/2013/11/27/us-markets-stocks-idUSBRE9AA0IH20131127:
+Stock news from Reuters: http://www.reuters.com/article/2013/11/27/us-markets-stocks-idUSBRE9AA0IH20131127 :
 
     tfIdfKeywords:s&p:48.97042059033133,percent:47.333692439587765,nasdaq:29.880743016112394,dow:20.576940142543165,close:19.017667564511584,market:18.862727666084133,stock:18.381896318650856,index:17.506806840992763,tech:15.843925634874989,reuters\/univers:15.701295594356253,hewlett-packard:15.463875704679813,tech-heavi:14.785004862482097,fell:14.297342434390117,sector:14.279279880380386,500:14.158308864598915,crude:13.859075413902122,27.001:13.450003795749756,ixic:13.450003795749756,expect:12.837610037289938,trader:12.83290180042393,
     Category lexemes:s&p:74.02537758920845,ixic:17.423559232422658,worst-perform:14.94930725137575,nasdaq:7.511574330006619,spni:3.1654320416021546,higher-than-expect:3.1621193273319705,
@@ -32,7 +32,7 @@ Stock news from Reuters: http://www.reuters.com/article/2013/11/27/us-markets-st
     Category:Stock market indices by continent:15.844947362286838
     Category:Stock market indices by country:15.841454852224125
     
-Mazda CX-5 review: http://www.caranddriver.com/reviews/2013-mazda-cx-5-first-drive-review:
+Mazda CX-5 review: http://www.caranddriver.com/reviews/2013-mazda-cx-5-first-drive-review :
 
     tfIdfKeywords:cx-5:223.80712290342382,mazda:188.40185346520448,suv:67.78253652297396,skyactiv:63.654405643932755,cx-7:44.761744351357606,fun-to-dr:43.345597877582655,mileag:31.831236365433508,model:27.202061512273822,deliv:24.32708804228273,front-driv:23.85706931252323,2.0-liter:23.558644516149876,engin:23.036704090278334,boomi:22.676393939135778,drive:21.53461418081624,percent:21.037196639816784,compact:20.00138356798216,six-spe:19.859708942452475,steer:19.002495514847645,rpm:18.472032654119666,mph:17.737553040612177,
     Category lexemes:cx-5:1632.646982796331,front-driv:273.4722295164951,skyactiv:273.03089753797764,all-wheel-dr:251.70274533556056,six-spe:232.4215211535967,four-cylind:203.23523696552803,2.0-liter:192.7949043076423,euro-spec:154.41612086998356,2.2-liter:153.60092641225683,boxier:145.04277484504115,fun-to-dr:133.78904025281594,cx-7:124.02374135210987,dual-zon:101.11602321421971,zoom-zoom:96.24229042353969,manual-transmiss:91.87837325244529,suv:85.33380214203868,u.s.-market:82.23441278904903,sports-car:63.95451652747622,drivelin:55.115977008624725,all-wheel:53.37148219478685,
@@ -42,7 +42,7 @@ Mazda CX-5 review: http://www.caranddriver.com/reviews/2013-mazda-cx-5-first-dri
     Category:Green vehicles:117.61510079064729
     Category:SUVs:109.28925105993333
     
-Russian financial news: http://lenta.ru/news/2013/11/27/basket/:
+Russian financial news: http://lenta.ru/news/2013/11/27/basket/ :
 
     tfIdfKeywords:бивалютн:36.59762046576131,рубл:36.533916169510725,бирж:28.824536388479302,копеек:22.863986334661064,корзин:21.488261534394724,евр:20.97563030478338,доллар:18.76370340903501,сесс:18.169027885071266,цен:13.091795356568873,коридор:12.979598345251366,ноябр:12.15601007775221,курс:11.974408507516628,нефт:11.722585014371505,границ:11.027360709076685,93,36:10.914008577671916,максимум:10.48239449932796,средневзвешен:10.07280829715283,подорожа:9.753520885285718,38,35:9.670405978575213,паден:9.60347911863312,
     Category lexemes:копеек:23.066292913526564,средневзвешен:22.95922111823851,38,35:21.867807844420263,бирж:21.866545890250954,93,36:19.283185857800127,бивалютн:18.4894848936164,подорожа:9.806561389888843,копейк:7.52200781558836,сделк:4.6956887806298155,рассчита:4.238812609474223,укреп:3.188538209579522,нефт:2.9712190390825777,12,3:2.907651186559428,утр:2.6604598621495876,стоимост:2.5535168694114585,0,7:2.380031831221264,сдвинул:2.183461502796707,0,3:1.9181339760393645,возобнов:1.4795137359944657,валют:1.4251754257819962,
@@ -121,7 +121,7 @@ Application which extracts text from web-pages, computes top tf-idf lexemes and 
     
     object Test extends App {
       CassandraConfig.seedHosts = "127.0.0.1:9160"
-      extract("http://www.scala-lang.org/")
+      extract("http://www.scala-lang.org/what-is-scala.html")
   
       def extract(url: String) {
         val text = ArticleExtractor.INSTANCE.getText(new URL(url))
