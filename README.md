@@ -151,3 +151,20 @@ Application which extracts text from web-pages, computes top tf-idf lexemes and 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/crypto5/wikivector/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
+Training pipeline
+=================
+
+Workflow of training pipeline is defined in https://github.com/crypto5/wikivector/blob/master/src/main/scala/org/wikivector/batch/Workflow.scala class.
+It requires Wikipedia xml dump file which can be downloaded from http://en.wikipedia.org/wiki/Wikipedia:Database_download#Where_do_I_get... i.e. for NL wilipedia you should use http://dumps.wikimedia.org/nlwiki/latest/nlwiki-latest-pages-articles.xml.bz2 .
+Recomended way to run it is to checkout source code, install SBT, and run Workflow application using SBT.
+You may need to change some parameters to make it working, specifically:
+
+define path to directory with data files (i.e. wikipedia dumps) in https://github.com/crypto5/wikivector/blob/master/src/main/scala/org/wikivector/config/GlobalConfig.scala
+
+Cassandra config in https://github.com/crypto5/wikivector/blob/master/src/main/scala/org/wikivector/config/CassandraConfig.scala
+
+wikipedia dump files to language mappings in https://github.com/crypto5/wikivector/blob/master/src/main/scala/org/wikivector/batch/page/LoadWikipages.scala
+
+Training process can take few weeks, so be patient.
+
+Happy hacking ;-)
