@@ -146,16 +146,11 @@ Application which extracts text from web-pages, computes top tf-idf lexemes and 
     }
 
 
-[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/0a2c0b43ce043d6934b2a5a78325f475 "githalytics.com")](http://githalytics.com/crypto5/wikivector)
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/crypto5/wikivector/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
 Training pipeline
 =================
 
 Workflow of training pipeline is defined in https://github.com/crypto5/wikivector/blob/master/src/main/scala/org/wikivector/batch/Workflow.scala class.
-It requires Wikipedia xml dump file which can be downloaded from http://en.wikipedia.org/wiki/Wikipedia:Database_download#Where_do_I_get... i.e. for NL wilipedia you should use http://dumps.wikimedia.org/nlwiki/latest/nlwiki-latest-pages-articles.xml.bz2 .
+It requires Wikipedia xml dump files which can be downloaded from http://en.wikipedia.org/wiki/Wikipedia:Database_download#Where_do_I_get... i.e. for NL wilipedia you should use http://dumps.wikimedia.org/nlwiki/latest/nlwiki-latest-pages-articles.xml.bz2 .
 Recomended way to run it is to checkout source code, install SBT, and run Workflow application using SBT.
 You may need to change some parameters to make it working, specifically:
 
@@ -168,3 +163,8 @@ wikipedia dump files to language mappings in https://github.com/crypto5/wikivect
 Training process can take few weeks, so be patient.
 
 Happy hacking ;-)
+
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/0a2c0b43ce043d6934b2a5a78325f475 "githalytics.com")](http://githalytics.com/crypto5/wikivector)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/crypto5/wikivector/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
