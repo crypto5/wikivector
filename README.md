@@ -5,7 +5,7 @@ The main goal of this project is to build machine learning and information retri
 
 Currently achieved goals:
 * calculate tf-idf values for lexemes in Wikipedia (covered 20M lexemes)
-* refine Wikipedia categories graph (it is not very clean at the moment, and containts many strange pathes)
+* refine Wikipedia categories graph (it is not very clean at the moment, and contains many strange pathes)
 * build classifier which can calculate relevant Wikipedia categories for given text (covered 2.5M categories)
 * provide API for extraction of top td-idf terms, Wikipedia categories, and category related terms from given text
 * support popular languages, currently supported: English, Russian, Arabic, Dutch, German, French, Polish, Italian, Portuguese, Spanish, Ukranian.
@@ -61,7 +61,7 @@ Wikivector has following main components:
 * training pipeline - parses wikipedia data, calculates statistics for lexemes and categories, trains Naive Bayesian classifier for categories.
 * API - jar library
 
-Wikivector uses Scala as main programming language, because it's very expressive, fast and very conveniant for writing complex algotirhm where performance is critical, and Cassandra as DB backend, because it is very amazingly fast and allows to achive 100+k inserts per second on mediocre desktop grade hardware.
+Wikivector uses Scala as main programming language, because it's very expressive, fast and very convenient for writing complex algorithms where performance is critical, and Cassandra as DB backend, because it is amazingly fast and allows to achieve 100+k inserts per second on mediocre desktop grade hardware.
 
 API: Setup
 ==========
@@ -85,7 +85,7 @@ http://dl.bintray.com/crypto5/wikivector/wikivector/wikivector/1.0.0/wikivector-
 
 * modify Cassandra connectivity settings in config.properties file in distribution directory
 
-* import model files into Cassandra by runnning following command from distribution directory: load_db.sh [directory with unzipped model files]
+* import model files into Cassandra by running following command from distribution directory: load_db.sh [directory with unzipped model files]
 
 How to use API + example
 ===========================
