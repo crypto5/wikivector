@@ -79,7 +79,7 @@ http://dl.bintray.com/crypto5/wikivector/wikivector/wikivector/1.0.0/wikivector-
 
 * unzip distribution file
 
-* download model files (size is about 6GB): http://goo.gl/oJ6F1x
+* download model files (size is about 6GB): http://goo.gl/ZRpcXj
 
 * unzip model file
 
